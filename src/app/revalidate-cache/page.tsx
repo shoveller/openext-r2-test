@@ -6,13 +6,9 @@ export const revalidate = 0; // 페이지 자체는 매번 렌더링
 // 첫 번째 인자: 캐싱할 비동기 함수 (DB 쿼리, 복잡한 연산 등)
 // 두 번째 인자: 캐시 키 배열 (고유해야 함, 내부적으로 식별자로 사용)
 // 세 번째 인자: 옵션 객체 (tags: 온디맨드 재검증용 태그, revalidate: 시간 기반 재검증 초)
-const getCachedTime = unstable_cache(
-  async () => new Date().toISOString(),
-  ['cached-time'],
-  {
-    revalidate: 60,
-  },
-);
+const getCachedTime = unstable_cache(async () => new Date().toISOString(), ['cached-time'], {
+  revalidate: 60,
+});
 
 export default async function RevalidateCacheTest() {
   const cachedTime = await getCachedTime();
