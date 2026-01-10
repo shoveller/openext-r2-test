@@ -12,9 +12,6 @@ export default function Home() {
       <li>
         <Link href="/revalidate-cache">unstable_cache 기반 ISR 테스트</Link>
       </li>
-      <li>
-        <Link href="/revalidate-rsc">RSC(Server Component) 기반 ISR 테스트</Link>
-      </li>
     </ul>
   );
 }
