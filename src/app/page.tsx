@@ -10,7 +10,10 @@ export default function Home() {
         <Link href="/revalidate-fetch">fetch 레벨 revalidate 기반 ISR 테스트</Link>
       </li>
       <li>
-        <Link href="/revalidate-fetch">next/cache 기반 ISR 테스트</Link>
+        <Link href="/revalidate-cache">unstable_cache 기반 ISR 테스트</Link>
+      </li>
+      <li>
+        <Link href="/revalidate-rsc">RSC(Server Component) 기반 ISR 테스트</Link>
       </li>
     </ul>
   );
