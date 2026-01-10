@@ -38,7 +38,7 @@
 	"r2_buckets": [
 		{
 			"binding": "NEXT_INC_CACHE_R2_BUCKET",
-			"bucket_name": "next_inc_cache_r2_bucket"
+			"bucket_name": "next-inc-cache-r2-bucket"
 		}
 	]
 	/**
