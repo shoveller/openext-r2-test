@@ -1,4 +1,4 @@
-import { createSelfFetch } from './createSelfFetch';
+import { createSelfFetch } from '../createSelfFetch';
 
 export const revalidate = 0; // 페이지 자체는 매번 렌더링
 
