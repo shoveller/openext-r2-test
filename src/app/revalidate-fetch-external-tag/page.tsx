@@ -37,8 +37,6 @@ const RevalidateFetchExternalTag = async (props: {
         ))}
       </ul>
 
-      <p>Rendered: {new Date().toISOString()}</p>
-
       <div className="my-4 flex gap-2">
         {offset > 0 && (
           <Link

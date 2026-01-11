@@ -3,12 +3,10 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="p-8 font-sans">
-      <h1 className="mb-6 text-2xl font-bold">OpenNext ISR Test</h1>
-
-      <h2 className="mt-6 mb-2 text-lg font-semibold text-gray-700">
-        Time-based Revalidation (Legacy)
-      </h2>
-      <ul className="mb-8 list-disc space-y-2 pl-5">
+      <h1 className="text-2xl font-bold mb-6">OpenNext ISR Test</h1>
+      
+      <h2 className="text-lg font-semibold mt-6 mb-2 text-gray-700">Time-based Revalidation (Legacy)</h2>
+      <ul className="list-disc space-y-2 pl-5 mb-8">
         <li>
           <Link href="/revalidate-page" className="text-blue-600 hover:underline">
             Page Level ISR (revalidate = 60)
@@ -26,10 +24,8 @@ export default function Home() {
         </li>
       </ul>
 
-      <h2 className="mt-6 mb-2 text-lg font-semibold text-gray-700">
-        On-Demand Revalidation (Tag-based)
-      </h2>
-      <ul className="list-disc space-y-2 pl-5">
+      <h2 className="text-lg font-semibold mt-6 mb-2 text-gray-700">On-Demand Revalidation (Tag-based)</h2>
+      <ul className="list-disc space-y-2 pl-5 mb-8">
         <li>
           <Link href="/revalidate-fetch-external-tag" className="text-purple-600 hover:underline">
             Fetch Level ISR (Tag) - External API & Pagination
@@ -38,6 +34,15 @@ export default function Home() {
         <li>
           <Link href="/revalidate-fetch-internal-tag" className="text-purple-600 hover:underline">
             Fetch Level ISR (Tag) - Internal API
+          </Link>
+        </li>
+      </ul>
+
+      <h2 className="text-lg font-semibold mt-6 mb-2 text-gray-700">Other Features</h2>
+      <ul className="list-disc space-y-2 pl-5">
+        <li>
+          <Link href="/image-test" className="text-green-600 hover:underline">
+            Cloudflare Image Optimization Test
           </Link>
         </li>
       </ul>
