@@ -3,6 +3,7 @@
 // 상세 가이드: https://docs.sentry.io/platforms/javascript/guides/nextjs/
 import * as Sentry from '@sentry/nextjs';
 
+import pkg from './package.json';
 import { sharedConfig } from './sentry.shared.config';
 
 Sentry.init({

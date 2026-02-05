@@ -7,12 +7,20 @@ import pkg from './package.json';
  * 상세 설정 가이드: https://docs.sentry.io/platforms/javascript/guides/nextjs/
  */
 
+const getRelease = () => {
+  if (process.env.CF_PAGES_COMMIT_SHA) {
+    return `${pkg.name}@${process.env.CF_PAGES_COMMIT_SHA}`;
+  }
+
+  return `${pkg.name}@${pkg.version}`;
+};
+
 export const sharedConfig = {
   // Sentry 프로젝트의 고유 식별자 (Data Source Name)
   dsn: 'https://4a59ecc0651b445ca39d9e98e2ce2383@o4505475310026752.ingest.us.sentry.io/4505475312779264',
 
-  // 앱의 현재 버전 (package.json의 version 사용)
-  release: `${pkg.name}@${pkg.version}`,
+  // 앱의 현재 버전 (Cloudflare 커밋 SHA 우선, 없으면 package.json의 version 사용)
+  release: getRelease(),
 
   // 성능 추적 샘플링 비율 (1.0 = 100% 수집). 프로덕션 환경에서는 0.1 정도로 조절하는 것을 권장합니다.
   tracesSampleRate: 0.1,
