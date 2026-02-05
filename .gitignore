@@ -52,3 +52,5 @@ next-env.d.ts
 !.dev.vars.example
 .idea/
 .gemini-clipboard/
+# Sentry Config File
+.env.sentry-build-plugin
