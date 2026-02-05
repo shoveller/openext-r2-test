@@ -16,8 +16,8 @@ export default function SentryTestPage() {
   const callApiSuccess = async () => {
     const res = await fetch('/api/sentry-test');
     const data = await res.json();
-    console.log(data);
-    alert('API 호출 성공 (콘솔 확인)');
+    console.warn('API Success Data:', data);
+    alert('API 호출 성공 (브라우저 콘솔의 경고 탭 확인)');
   };
 
   const callApiError = async () => {

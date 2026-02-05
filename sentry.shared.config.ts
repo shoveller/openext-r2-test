@@ -45,7 +45,7 @@ export const sharedConfig = {
   integrations: [
     // 콘솔 로그 자동 캡처
     Sentry.captureConsoleIntegration({
-      levels: ['error', 'warn'],
+      levels: ['info', 'error', 'warn'],
     }),
     // 에러 객체의 추가 속성 캡처
     Sentry.extraErrorDataIntegration({
