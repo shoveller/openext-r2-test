@@ -45,6 +45,11 @@ export default function Home() {
       <h2 className="mt-6 mb-2 text-lg font-semibold text-gray-700">Other Features</h2>
       <ul className="list-disc space-y-2 pl-5">
         <li>
+          <Link href="/sentry-test" className="font-bold text-red-600 hover:underline">
+            Sentry Integration Test Suite (Error & Trace)
+          </Link>
+        </li>
+        <li>
           <Link href="/image-test" className="text-green-600 hover:underline">
             Cloudflare Image Optimization Test
           </Link>
